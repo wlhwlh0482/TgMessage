@@ -67,3 +67,19 @@ class Bot
         return substr(base64_decode($text), strlen($this->key));
     }
 }
+
+curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.telegram.org/bot{你的token}/setWebhook',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS => array('url' => 'https://{你的域名}/api?type=webhook'),
+));
+
+$response = curl_exec($curl);
