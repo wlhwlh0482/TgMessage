@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://api.telegram.org/bot5969604325:AAH1yRb9t2hSbx7rETqY4Czz_ehkSkpRJq4/setWebhook',
+  CURLOPT_URL => 'https://api.telegram.org/bo/setWebhook',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
